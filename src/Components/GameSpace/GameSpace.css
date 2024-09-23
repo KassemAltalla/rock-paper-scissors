@@ -9,7 +9,6 @@
   display: flex;
   flex-wrap: wrap;
   position: relative;
-  border: 1px solid chartreuse;
 }
 .gameSpace div:nth-child(1) {
   position: absolute;
@@ -56,6 +55,9 @@
   .gameSpace {
     width: 100vw;
   }
+  .scoreScreen {
+  width: 100vw;
+}
 }
 @media (max-width: 450px) {
   .gameSpace {
@@ -63,6 +65,11 @@
   }
   .gameSpace div:nth-child(1) {
     right: 30px;
+  }
+  .scoreScreen button{
+    font-size: 20px;
+    width: 100px;
+    padding: 5px;
   }
 }
 @media (max-width: 360px) {
