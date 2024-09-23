@@ -1,0 +1,26 @@
+.gameBtn {
+  background-color: azure;
+  border-width: 15px;
+  border-style: solid;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+.gameBtn:hover {
+  opacity: 1;
+  scale: 1.1;
+}
+.gameBtn:active {
+  scale: 0.8;
+}
+@media (max-width:600px) {
+  .gameBtn{
+    width: calc(30vw);
+    height: calc(30vw);
+  }
+}

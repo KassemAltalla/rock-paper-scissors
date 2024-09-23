@@ -1,0 +1,50 @@
+.title {
+  width: 60%;
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border: 5px solid #cacaca9e;
+  border-radius: 20px;
+  color: gainsboro;
+}
+.gameName {
+  font-size: 24px;
+  font-weight: 700;
+}
+.gameName p {
+  margin: 10px;
+}
+.Score {
+  background-color: aliceblue;
+  color: #3a3939;
+  font-size: x-large;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+}
+.Score p {
+  margin: 10px 20px;
+}
+.Score p:nth-child(1) {
+  color: #438afd;
+}
+.Score p:nth-child(2) {
+  font-size: 44px;
+  font-weight: 700;
+}
+@media (max-width:600px) {
+  .title{
+    width: 100%;
+  }
+  .Score p:nth-child(1) {
+    font-size: 22px;
+  }
+  .Score p:nth-child(2) {
+    font-size: 30px;
+    font-weight: 700;
+  }
+}

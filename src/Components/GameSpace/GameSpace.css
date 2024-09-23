@@ -1,0 +1,73 @@
+.gameSpace {
+  background-image: url("../../images/bg-triangle.svg");
+  width: 520px;
+  height: 360px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  padding: 8px 58px;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  border: 1px solid chartreuse;
+}
+.gameSpace div:nth-child(1) {
+  position: absolute;
+  top: 10px;
+  right: 50px;
+}
+.gameSpace div:nth-child(3) {
+  position: absolute;
+  bottom: 30px;
+  right: 36%;
+}
+.scoreScreen {
+  display: flex;
+  justify-content: space-evenly;
+  width: 70vw;
+  text-align: center;
+  height: 300px;
+}
+.scoreScreen p {
+  font-size: 24px;
+  font-weight: 500;
+  color: aliceblue;
+}
+.scoreScreen .gameBtn {
+  animation: anim 1s ease-in;
+}
+@keyframes anim {
+  0% {
+    scale: 0.4;
+    opacity: 0.2;
+  }
+  100% {
+    scale: 1;
+    opacity: 1;
+  }
+}
+.choose {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 600px) {
+  .gameSpace {
+    width: 100vw;
+  }
+}
+@media (max-width: 450px) {
+  .gameSpace {
+    padding-inline: 10px;
+  }
+  .gameSpace div:nth-child(1) {
+    right: 30px;
+  }
+}
+@media (max-width: 360px) {
+  
+  .gameSpace div:nth-child(1) {
+    right: 10px;
+  }
+}

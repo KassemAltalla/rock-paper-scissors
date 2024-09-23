@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import GameSpace from "./Components/GameSpace/GameSpace";
+import Rules from "./Components/Rules/Rules";
+import Title from "./Components/Title/Title";
 
 function App() {
+  const [rulesScreen, setRulesScreen] = useState(false);
+  const toggleRuleScreen = () => {
+    setRulesScreen(!rulesScreen);
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Title />
+      <GameSpace />
+      <div>
+        <button onClick={toggleRuleScreen}>Rules</button>
+      </div>
+      <Rules dis={rulesScreen} />
+      <div
+        className="Close"
+        style={{ display: rulesScreen ? "block" : "none" }}
+        onClick={toggleRuleScreen}
+      >
+        Close
+      </div>
     </div>
   );
 }
